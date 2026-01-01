@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+env/
+
+# Data
+data/raw_pdfs/*
+data/processed_text/*
+data/merged_text/*
+chroma_db/*
+
+!.gitkeep
+
+# Notebooks
+.ipynb_checkpoints/
