@@ -31,7 +31,7 @@ def test_collection(collection):
         return
     
     # Perform a sample query
-    query_text = "What is the financial performance?"  # Example query
+    query_text = "How many independent directors were there in 2024?"  # Example query
     results = collection.query(
         query_texts=[query_text],
         n_results=3  # Return top 3 results
