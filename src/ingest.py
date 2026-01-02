@@ -25,9 +25,7 @@ def main():
     # Step 3: Add chunks to ChromaDB
     client, collection = get_chroma_collection()  # Unpack client and collection
     add_chunks_to_chroma(collection, chunks)
-
     print("Chunks successfully added to ChromaDB")
-    # Removed persist call as it's not needed and causes errors
 
 if __name__ == "__main__":
     main()
