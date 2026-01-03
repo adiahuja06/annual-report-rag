@@ -28,6 +28,7 @@ def build_context(results):
         citations.add(meta["page"])
 
     context = "\n\n".join(context_blocks)
+    print("Context and citations built.")
     return context, sorted(citations)
 
 
@@ -37,6 +38,7 @@ def answer_query(query: str, top_k: int = 5):
 
     # Step 2: Build context + citations
     context, citations = build_context(results)
+
 
     # Step 3: Build grounded prompt
     prompt = f"""
@@ -53,9 +55,9 @@ Instructions:
 
 Answer:
 """
-
+    print("Now calling LLM with grounded prompt.")
     # Step 4: Call LLM
-    answer = call_llm(prompt)
+    answer = call_llm(context,prompt)
 
     return answer, citations
 
